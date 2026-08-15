@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1 class="hero__name">{{ site.title }}</h1>
+  <p class="hero__tagline">{{ site.tagline }}</p>
+</section>
+
+<section class="category-grid">
+  <a class="category-card" href="{{ '/media-art/' | relative_url }}">
+    {% assign cover = site.mediaart | sort: 'order' | first %}
+    <div class="category-card__image" style="background-image:url('{{ cover.cover | relative_url }}')"></div>
+    <span class="category-card__label">Media Art</span>
+  </a>
+  <a class="category-card" href="{{ '/media-for-performance/' | relative_url }}">
+    {% assign cover = site.performance | sort: 'order' | first %}
+    <div class="category-card__image" style="background-image:url('{{ cover.cover | relative_url }}')"></div>
+    <span class="category-card__label">Media for Performance</span>
+  </a>
+  <a class="category-card" href="{{ '/public-art/' | relative_url }}">
+    {% assign cover = site.publicart | sort: 'order' | first %}
+    <div class="category-card__image" style="background-image:url('{{ cover.cover | relative_url }}')"></div>
+    <span class="category-card__label">Public Art</span>
+  </a>
+</section>
+
+<section class="home-about">
+  {{ content }}
+  <a class="home-about__link" href="{{ '/biography/' | relative_url }}">Read more about Eitan &rarr;</a>
+</section>

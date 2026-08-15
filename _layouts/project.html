@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="project__header">
+    <a class="project__crumb" href="{{ page.category_url | relative_url }}">&larr; {{ page.category_label }}</a>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  <div class="project__slides">
+    {% for slide in page.slides %}
+    <figure class="project__slide">
+      {% if slide.type == 'video' %}
+        <div class="project__video">
+          <iframe src="{{ slide.video }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy" title="{{ slide.title | default: page.title }}"></iframe>
+        </div>
+      {% else %}
+        <img src="{{ slide.image | relative_url }}" alt="{{ slide.title | default: page.title }}" loading="lazy">
+      {% endif %}
+      {% if slide.title or slide.description %}
+      <figcaption>
+        {% if slide.title %}<strong>{{ slide.title }}</strong>{% endif %}
+        {% if slide.description %}{{ slide.description | markdownify }}{% endif %}
+      </figcaption>
+      {% endif %}
+    </figure>
+    {% endfor %}
+  </div>
+
+  {% assign items = site[page.collection] | sort: 'order' %}
+  {% assign total = items.size %}
+  {% for item in items %}
+    {% if item.url == page.url %}{% assign idx = forloop.index0 %}{% endif %}
+  {% endfor %}
+  {% assign next_idx = idx | plus: 1 %}
+  {% assign prev_idx = idx | minus: 1 %}
+  <nav class="project__pager">
+    {% if idx > 0 %}
+      {% assign prev_item = items[prev_idx] %}
+      <a href="{{ prev_item.url | relative_url }}">&larr; {{ prev_item.title }}</a>
+    {% else %}<span></span>{% endif %}
+    {% if next_idx < total %}
+      {% assign next_item = items[next_idx] %}
+      <a href="{{ next_item.url | relative_url }}">{{ next_item.title }} &rarr;</a>
+    {% else %}<span></span>{% endif %}
+  </nav>
+</article>

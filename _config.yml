@@ -1,0 +1,66 @@
+title: Eitan Mendelowitz
+tagline: Media Art / Computer Science
+description: >-
+  Portfolio of Eitan Mendelowitz — media art, media for performance,
+  and public art installations.
+url: "https://eitanm.com"
+baseurl: ""
+twitter_username: redfood
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+  mediaart:
+    output: true
+    permalink: /media-art/:path/
+  performance:
+    output: true
+    permalink: /media-for-performance/:path/
+  publicart:
+    output: true
+    permalink: /public-art/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: mediaart
+    values:
+      layout: project
+      category: media-art
+      category_label: "Media Art"
+      category_url: /media-art/
+  - scope:
+      path: ""
+      type: performance
+    values:
+      layout: project
+      category: performance
+      category_label: "Media for Performance"
+      category_url: /media-for-performance/
+  - scope:
+      path: ""
+      type: publicart
+    values:
+      layout: project
+      category: public-art
+      category_label: "Public Art"
+      category_url: /public-art/
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="category-page">
+  <h1>{{ page.title }}</h1>
+  <div class="project-grid">
+    {% assign page_items = site[page.collection] | sort: 'order' %}
+    {% for p in page_items %}
+    <a class="project-card" href="{{ p.url | relative_url }}">
+      <div class="project-card__image" style="background-image:url('{{ p.cover | relative_url }}')"></div>
+      <span class="project-card__title">{{ p.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</article>

@@ -1,0 +1,43 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <div class="site-nav__group">
+        <a href="{{ '/media-art/' | relative_url }}" class="site-nav__top{% if page.category == 'media-art' or page.url == '/media-art/' %} is-active{% endif %}">Media Art</a>
+        <ul class="site-nav__sub">
+          {% for p in site.mediaart %}
+          <li><a href="{{ p.url | relative_url }}"{% if page.url == p.url %} class="is-active"{% endif %}>{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="site-nav__group">
+        <a href="{{ '/media-for-performance/' | relative_url }}" class="site-nav__top{% if page.category == 'performance' or page.url == '/media-for-performance/' %} is-active{% endif %}">Media for Performance</a>
+        <ul class="site-nav__sub">
+          {% for p in site.performance %}
+          <li><a href="{{ p.url | relative_url }}"{% if page.url == p.url %} class="is-active"{% endif %}>{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="site-nav__group">
+        <a href="{{ '/public-art/' | relative_url }}" class="site-nav__top{% if page.category == 'public-art' or page.url == '/public-art/' %} is-active{% endif %}">Public Art</a>
+        <ul class="site-nav__sub">
+          {% for p in site.publicart %}
+          <li><a href="{{ p.url | relative_url }}"{% if page.url == p.url %} class="is-active"{% endif %}>{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="site-nav__group">
+        <a href="{{ '/biography/' | relative_url }}" class="site-nav__top{% if page.url contains '/biography/' or page.url contains '/publications/' or page.url contains '/exhibition-history/' or page.url contains '/contact/' %} is-active{% endif %}">About</a>
+        <ul class="site-nav__sub">
+          <li><a href="{{ '/biography/' | relative_url }}"{% if page.url == '/biography/' %} class="is-active"{% endif %}>Biography</a></li>
+          <li><a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} class="is-active"{% endif %}>Publications</a></li>
+          <li><a href="{{ '/exhibition-history/' | relative_url }}"{% if page.url == '/exhibition-history/' %} class="is-active"{% endif %}>Exhibition History</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} class="is-active"{% endif %}>Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
