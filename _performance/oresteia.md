@@ -1,6 +1,7 @@
 ---
 title: Oresteia
 order: 1
+year: "2011"
 cover: /assets/images/performance/oresteia/01.jpg
 slides:
 - type: image

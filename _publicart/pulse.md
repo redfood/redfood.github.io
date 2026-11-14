@@ -1,6 +1,7 @@
 ---
 title: Pulse
 order: 2
+year: "2009"
 cover: /assets/images/public-art/pulse/01.jpg
 slides:
 - type: image

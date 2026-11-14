@@ -1,6 +1,7 @@
 ---
 title: Drafting Poems
 order: 9
+year: "2002-2006"
 cover: /assets/images/media-art/drafting-poems/01.jpg
 slides:
 - type: image

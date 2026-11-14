@@ -1,6 +1,7 @@
 ---
 title: Aurora
 order: 0
+year: "2013"
 cover: /assets/images/public-art/aurora/01.jpg
 slides:
 - type: image

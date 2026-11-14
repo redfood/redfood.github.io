@@ -1,6 +1,7 @@
 ---
 title: COEXISTENCE
 order: 10
+year: "2002"
 cover: /assets/images/media-art/coexistence/01.jpg
 slides:
 - type: image

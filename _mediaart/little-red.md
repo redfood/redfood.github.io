@@ -1,6 +1,7 @@
 ---
 title: Little Red
 order: 8
+year: "2003"
 cover: /assets/images/media-art/little-red/01.jpg
 slides:
 - type: image

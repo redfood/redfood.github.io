@@ -1,6 +1,7 @@
 ---
 title: Morse
 order: 3
+year: "2011"
 cover: /assets/images/media-art/morse/01.jpg
 slides:
 - type: image

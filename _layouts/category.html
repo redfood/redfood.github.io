@@ -8,7 +8,7 @@ layout: default
     {% for p in page_items %}
     <a class="project-card" href="{{ p.url | relative_url }}">
       <div class="project-card__image" style="background-image:url('{{ p.cover | relative_url }}')"></div>
-      <span class="project-card__title">{{ p.title }}</span>
+      <span class="project-card__title">{{ p.title }}{% if p.year %}{% unless p.title contains p.year %}, {{ p.year }}{% endunless %}{% endif %}</span>
     </a>
     {% endfor %}
   </div>

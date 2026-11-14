@@ -1,6 +1,7 @@
 ---
 title: IOAN
 order: 0
+year: "2018–present"
 cover: /assets/images/media-art/ioan-2/01.jpeg
 slides:
 - type: image

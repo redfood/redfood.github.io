@@ -1,6 +1,7 @@
 ---
 title: Aether
 order: 1
+year: "2012"
 cover: /assets/images/public-art/aether/01.jpg
 slides:
 - type: image

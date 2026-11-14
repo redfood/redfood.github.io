@@ -1,6 +1,7 @@
 ---
 title: Ecce Homology
 order: 7
+year: "2003–2005"
 cover: /assets/images/media-art/ecce-homology/01.jpg
 slides:
 - type: image

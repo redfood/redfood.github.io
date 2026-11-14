@@ -1,6 +1,7 @@
 ---
 title: Cunningham MinEVENT
 order: 2
+year: "2011"
 cover: /assets/images/performance/cunningham-minevent/01.jpg
 slides:
 - type: image

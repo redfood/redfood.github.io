@@ -1,6 +1,7 @@
 ---
 title: Whorl
 order: 1
+year: "2014"
 cover: /assets/images/media-art/whorl/01.jpg
 slides:
 - type: image

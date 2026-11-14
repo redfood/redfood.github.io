@@ -1,6 +1,7 @@
 ---
 title: Blogger Project
 order: 3
+year: "2006"
 cover: /assets/images/performance/blogger-project/01.jpg
 slides:
 - type: image

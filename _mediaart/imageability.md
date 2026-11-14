@@ -1,6 +1,7 @@
 ---
 title: Imageability
 order: 5
+year: "2006"
 cover: /assets/images/media-art/imageability/01.jpg
 slides:
 - type: image

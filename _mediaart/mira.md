@@ -1,6 +1,7 @@
 ---
 title: Mira 2008
 order: 4
+year: "2008"
 cover: /assets/images/media-art/mira/01.jpg
 slides:
 - type: image

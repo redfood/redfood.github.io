@@ -1,6 +1,7 @@
 ---
 title: Utopia Parkway
 order: 0
+year: "2012"
 cover: /assets/images/performance/utopia-parkway/01.jpg
 slides:
 - type: image

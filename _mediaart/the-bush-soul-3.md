@@ -1,6 +1,7 @@
 ---
 title: The Bush Soul (#3)
 order: 11
+year: "1999"
 cover: /assets/images/media-art/the-bush-soul-3/01.jpg
 slides:
 - type: image

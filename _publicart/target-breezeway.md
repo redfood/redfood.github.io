@@ -1,6 +1,7 @@
 ---
 title: Target Breezeway
 order: 5
+year: "2005-2006"
 cover: /assets/images/public-art/target-breezeway/01.jpg
 slides:
 - type: image

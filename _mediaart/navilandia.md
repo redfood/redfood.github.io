@@ -1,6 +1,7 @@
 ---
 title: Navilandia
 order: 2
+year: "2012"
 cover: /assets/images/media-art/navilandia/01.png
 slides:
 - type: image

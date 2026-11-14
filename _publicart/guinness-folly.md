@@ -1,6 +1,7 @@
 ---
 title: Guinness Folly
 order: 3
+year: "2010"
 cover: /assets/images/public-art/guinness-folly/01.png
 slides:
 - type: image

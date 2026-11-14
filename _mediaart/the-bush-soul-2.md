@@ -1,6 +1,7 @@
 ---
 title: The Bush Soul (#2)
 order: 12
+year: "1998"
 cover: /assets/images/media-art/the-bush-soul-2/01.jpg
 slides:
 - type: image

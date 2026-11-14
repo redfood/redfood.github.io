@@ -1,6 +1,7 @@
 ---
 title: The Ineffable
 order: 6
+year: "2004"
 cover: /assets/images/media-art/the-ineffable/01.jpg
 slides:
 - type: image

@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="site-header__name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="site-header__name{% if page.url == '/' %} site-header__name--hidden{% endif %}" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -30,9 +30,8 @@
         </ul>
       </div>
       <div class="site-nav__group">
-        <a href="{{ '/biography/' | relative_url }}" class="site-nav__top{% if page.url contains '/biography/' or page.url contains '/publications/' or page.url contains '/exhibition-history/' or page.url contains '/contact/' %} is-active{% endif %}">About</a>
+        <a href="{{ '/about/' | relative_url }}" class="site-nav__top{% if page.url == '/about/' or page.url contains '/publications/' or page.url contains '/exhibition-history/' or page.url contains '/contact/' %} is-active{% endif %}">About</a>
         <ul class="site-nav__sub">
-          <li><a href="{{ '/biography/' | relative_url }}"{% if page.url == '/biography/' %} class="is-active"{% endif %}>Biography</a></li>
           <li><a href="{{ '/publications/' | relative_url }}"{% if page.url == '/publications/' %} class="is-active"{% endif %}>Publications</a></li>
           <li><a href="{{ '/exhibition-history/' | relative_url }}"{% if page.url == '/exhibition-history/' %} class="is-active"{% endif %}>Exhibition History</a></li>
           <li><a href="{{ '/contact/' | relative_url }}"{% if page.url == '/contact/' %} class="is-active"{% endif %}>Contact</a></li>
