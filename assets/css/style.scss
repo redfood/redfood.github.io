@@ -28,6 +28,9 @@ html, body {
   padding: 0;
 }
 
+/* Never show a horizontal scrollbar; clip (unlike hidden) keeps the sticky header working */
+html { overflow-x: clip; }
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -141,6 +144,12 @@ img { max-width: 100%; display: block; }
   transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
 }
 
+/* Right-align the last two dropdowns so their (hidden) menus don't overflow the viewport */
+.site-nav__group:nth-last-child(-n+2) .site-nav__sub {
+  left: auto;
+  right: 0;
+}
+
 .site-nav__group:hover .site-nav__sub,
 .site-nav__group:focus-within .site-nav__sub {
   opacity: 1;
@@ -178,19 +187,18 @@ img { max-width: 100%; display: block; }
     right: 0;
     background: var(--bg);
     border-bottom: 1px solid var(--border);
-    padding: 0.5rem 1.5rem 1.25rem;
+    padding: 0 1.5rem 1.25rem;
+    /* Menu is taller than short screens: cap it to the space below the header and let it scroll */
+    max-height: calc(100vh - 4.5rem);
+    max-height: calc(100dvh - 4.5rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    text-align: right;
   }
   body.nav-open .site-nav { display: flex; }
   .site-nav__group { width: 100%; }
-  .site-nav__sub {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    padding: 0 0 0.5rem 0.75rem;
-  }
+  /* Top-level links only on narrow screens; category pages list the works */
+  .site-nav__sub { display: none; }
 }
 
 /* ---------- Main / footer ---------- */
